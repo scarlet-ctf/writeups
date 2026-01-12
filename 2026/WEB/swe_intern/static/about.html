@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Status - JWT Studio</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #334155; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #f8fafc; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        h1 { color: #1e293b; margin-top: 0; }
+        .status-up { color: #059669; font-weight: bold; }
+        .version-info { background: #1e293b; color: #fbbf24; padding: 15px; border-radius: 8px; font-family: monospace; margin-top: 20px; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #6366f1; text-decoration: none; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        li::before { content: "✓"; position: absolute; left: 0; color: #059669; }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Generator</a>
+    <div class="card">
+        <h1>System Information</h1>
+        <p>Current Service Status: <span class="status-up">OPERATIONAL</span></p>
+        
+        <h3>Infrastructure Notes:</h3>
+        <ul>
+            <li>Running on Python 3.9 (Flask Framework)</li>
+            <li>HS256 Token Signing Engine: Active</li>
+            <li>Internal Storage: Encrypted</li>
+            <li><strong>Deployment:</strong> Automated via Git-Hooks</li>
+        </ul>
+
+        <div class="version-info">
+            # System Build Manifest<br>
+            BUILD_ID: R1KUVKH3<br>
+            LAST_STABLE_COMMIT: u3c83hcm... (Added operational status!)<br>
+            ENVIRONMENT: Production
+        </div>
+             <p style="margin-top:20px; font-size: 0.9rem; color: #64748b;">
+            <em>Note to Devs: Please remember to keep clean code! Action will be taken against those who retaliate. </em>
+        </p>
+        
+    </div>
+</body>
+</html>

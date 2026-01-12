@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Web Token Studio</title>
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; --card: #1e293b; --text: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); display: flex; justify-content: center; padding-top: 5vh; }
+        .container { background: var(--card); padding: 2rem; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); width: 100%; max-width: 500px; }
+        nav { margin-bottom: 2rem; border-bottom: 1px solid #334155; padding-bottom: 1rem; }
+        nav a { color: #94a3b8; text-decoration: none; margin-right: 15px; font-size: 0.9rem; }
+        nav a:hover { color: var(--primary); }
+        h2 { margin-top: 0; color: var(--primary); }
+        input { width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: var(--primary); border: none; color: white; border-radius: 6px; cursor: pointer; font-weight: bold; transition: opacity 0.2s; }
+        button:hover { opacity: 0.9; }
+        .result { margin-top: 1.5rem; background: #000; padding: 1rem; border-radius: 6px; border: 1px solid var(--primary); }
+        .token { word-break: break-all; font-family: monospace; color: #fbbf24; font-size: 0.85rem; }
+        .label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 5px; display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Generator</a>
+            <a href="/view?page=docs.html">API Docs</a>
+            <a href="/view?page=about.html">System Status</a>
+        </nav>
+
+        <h2>JWT Studio</h2>
+        <p style="color: #94a3b8; font-size: 0.9rem;">Generate secure tokens for your microservices.</p>
+        
+        <form action="/generate" method="POST">
+            <input type="text" name="username" placeholder="Identity / Username" required>
+            <input type="password" name="password" placeholder="Passphrase" required>
+            <button type="submit">Generate Token</button>
+        </form>
+
+        {% if token %}
+        <div class="result">
+            <span class="label">Generated JWT Token</span>
+            <div class="token">{{ token }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

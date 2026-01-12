@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation - JWT Studio</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #334155; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #f8fafc; }
+        h1 { color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        h2 { color: #6366f1; margin-top: 30px; }
+        code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        .endpoint { background: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #6366f1; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin: 20px 0; }
+        .method { font-weight: bold; color: #059669; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #6366f1; text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Generator</a>
+    <h1>Developer Documentation</h1>
+    <p>Welcome to the JWT Studio API. Use these endpoints to integrate token generation into your own workflows.</p>
+
+    <h2>Authentication</h2>
+    <div class="endpoint">
+        <p><span class="method">POST</span> <code>/generate</code></p>
+        <p>Returns a signed HS256 JWT. Requires <code>username</code> and <code>password</code> fields in the request body.</p>
+    </div>
+
+    <h2>System Information</h2>
+    <div class="endpoint">
+        <p><span class="method">GET</span> <code>/view?page=docs.html</code></p>
+        <p>Retrieves static documentation and system status pages.</p>
+    </div>
+
+    <h2>Security Policy</h2>
+    <p>All tokens are signed using our internal private key. Do not share your <code>SECRET_KEY</code> with anyone. Our internal file viewer is restricted to the <code>static</code> directory for security.</p>
+    
+    <hr style="margin-top: 50px; border: 0; border-top: 1px solid #e2e8f0;">
+    <p style="font-size: 0.8rem; color: #94a3b8;">JWT Studio v1.0.4-stable | Internal Build</p>
+</body>
+</html>
