@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 8px 8px 0px var(--accent);
+        border: 4px solid var(--primary);
+        margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        color: var(--secondary);
+        max-width: 700px;
+        margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: var(--accent);
+        color: var(--secondary);
+        padding: 1rem 3rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 800;
+        transition: transform 0.2s;
+        border: 3px solid var(--secondary);
+        box-shadow: 4px 4px 0px var(--secondary);
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05) rotate(-2deg);
+        background-color: #67e8f9;
+        box-shadow: 6px 6px 0px var(--secondary);
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+        border: 2px solid #fbcfe8;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .animatronic-name {
+        color: var(--secondary);
+        font-weight: 900;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fade-in">
+    <section class="hero">
+        <h1>Let's Party!</h1>
+        <p>Come down to Girlie Pop's Pizza Place for the most magical pizza experience on earth! Meet the band and eat
+            some glitter-infused pepperoni toppings!</p>
+        <a href="/contact" class="cta-button">BOOK NOW</a>
+    </section>
+
+    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; text-transform: uppercase;">Meet the Stars!
+    </h2>
+
+    <section class="features">
+        <div class="feature-card">
+            <span class="feature-icon">🐻🎤</span>
+            <span class="animatronic-name">Gigi the Glamour Bear</span>
+            <p>She's the star of the show! With her sparkling microphone and hot pink top hat, Gigi leads the band with
+                style and grace.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🐰🎸</span>
+            <span class="animatronic-name">Bella the Bunny</span>
+            <p>Bella rocks the stage with her purple electric guitar. She hops to the beat and makes sure every kid is
+                dancing!</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🐔🧁</span>
+            <span class="animatronic-name">Chichi the Chicken</span>
+            <p>Chichi loves to eat! Visit her in the kitchen for cupcake decorating parties. Just watch out for her
+                "special" sauce!</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🦊🏴‍☠️</span>
+            <span class="animatronic-name">Fifi the Fox</span>
+            <p>The pirate queen of Cove Corner! Fifi tells tails of the high seas. (Currently Out of Order for
+                Maintenance).</p>
+        </div>
+    </section>
+</div>
+{% endblock %}

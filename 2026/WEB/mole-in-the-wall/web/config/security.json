@@ -1,0 +1,10 @@
+{
+  "jwt": {
+    "algorithm": "HS256",
+    "required_claims": {
+      "role": "nightguard",
+      "department": "security",
+      "shift": "night"
+    }
+  }
+}

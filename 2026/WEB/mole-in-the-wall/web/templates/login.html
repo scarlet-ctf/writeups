@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}Staff Login{% endblock %}
+
+{% block content %}
+<div class="fade-in" style="display: flex; justify-content: center; align-items: center; min-height: 60vh;">
+    <div
+        style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 10px 10px 0px rgba(0,0,0,0.1); width: 100%; max-width: 400px; border: 2px solid var(--secondary);">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div
+                style="background: var(--bg-light); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 3px solid var(--primary);">
+                <span style="font-size: 2.5rem;">🔐</span>
+            </div>
+            <h2 style="color: var(--primary); margin: 0; font-weight: 900; letter-spacing: -1px;">STAFF ONLY</h2>
+            <p style="color: var(--secondary); margin-top: 0.5rem; font-weight: bold; font-family: monospace;">NIGHT
+                GUARD ACCESS API</p>
+        </div>
+
+        {% if error %}
+        <div
+            style="background-color: #fef2f2; color: #be185d; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; text-align: center; border: 1px solid #fecaca; font-weight: bold;">
+            ⚠️ {{ error }}
+        </div>
+        {% endif %}
+
+        <form action="/login" method="POST">
+            <div style="margin-bottom: 1.5rem;">
+                <label
+                    style="display: block; color: var(--secondary); margin-bottom: 0.5rem; font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Security
+                    Token</label>
+                <input type="text" name="token" placeholder="ENTER TOKEN" required
+                    style="width: 100%; padding: 1rem; border: 3px solid var(--accent); border-radius: 8px; box-sizing: border-box; font-family: monospace; letter-spacing: 2px; font-weight: bold; color: var(--primary); outline: none;">
+            </div>
+
+            <button type="submit"
+                style="width: 100%; background: var(--primary); color: white; padding: 1rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.2s; font-size: 1.1rem; text-transform: uppercase; box-shadow: 0 4px 0 #831843;">
+                Authenticate
+            </button>
+        </form>
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.75rem; color: var(--secondary); opacity: 0.8;">
+            UNAUTHORIZED ACCESS IS A VIOLATION OF CONTRACT 4-X. VIOLATORS WILL BECOME THE BITE OF '87.
+        </p>
+    </div>
+</div>
+{% endblock %}

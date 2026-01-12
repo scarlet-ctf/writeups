@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}Book a Party{% endblock %}
+
+{% block content %}
+<div class="fade-in" style="max-width: 600px; margin: 0 auto;">
+    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 2rem; text-align: center; font-weight: 800;">
+        Book Your Party!</h1>
+
+    <div
+        style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-top: 10px solid var(--accent);">
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--secondary);">Ready to celebrate with Gigi and
+            the gang? Fill out the form below!</p>
+        <form
+            onsubmit="event.preventDefault(); alert('Party Request Received! We make sure to have extra ... balloons.');">
+            <div style="margin-bottom: 1.5rem;">
+                <label
+                    style="display: block; color: var(--secondary); margin-bottom: 0.5rem; font-weight: 700;">Birthday
+                    Star's Name</label>
+                <input type="text"
+                    style="width: 100%; padding: 1rem; border: 2px solid #ddd; border-radius: 10px; box-sizing: border-box; background: #fafafa;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: var(--secondary); margin-bottom: 0.5rem; font-weight: 700;">Parent
+                    Email</label>
+                <input type="email"
+                    style="width: 100%; padding: 1rem; border: 2px solid #ddd; border-radius: 10px; box-sizing: border-box; background: #fafafa;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: var(--secondary); margin-bottom: 0.5rem; font-weight: 700;">Special
+                    Requests</label>
+                <textarea rows="4"
+                    style="width: 100%; padding: 1rem; border: 2px solid #ddd; border-radius: 10px; box-sizing: border-box; background: #fafafa;"></textarea>
+            </div>
+
+            <button type="submit"
+                style="width: 100%; background: var(--primary); color: white; padding: 1rem; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 0 #831843;">Send
+                Reservation</button>
+        </form>
+
+        <div style="margin-top: 2rem; text-align: center; color: var(--secondary); font-size: 0.9rem;">
+            <p>For urgent complaints regarding animatronic behavior, call <strong>1-800-GIRL-POP</strong>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

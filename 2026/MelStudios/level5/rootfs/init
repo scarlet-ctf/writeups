@@ -1,0 +1,17 @@
+#!/bin/sh
+
+mkdir -p /proc /dev
+mount -t proc none /proc
+mount -t devtmpfs none /dev
+
+mkdir /mnt
+mount -t 9p -o trans=virtio,version=9p2000.L shared /mnt
+chmod -R 755 /mnt
+
+chmod u+s /home/amels/example1
+chown root:root /flag.txt
+chmod 400 flag.txt
+
+insmod /anticheat.ko
+
+exec setsid cttyhack setuidgid 100 /bin/sh 0<>"/dev/ttyS0" 1>&0 2>&0

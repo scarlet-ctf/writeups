@@ -1,0 +1,9 @@
+version: "1.0"
+
+services:
+  knowledge-universal:
+    build: ./malicious_repository
+  skibidi-toilet-enjoyer:
+    build: ./victim
+    ports:
+      - "22:22"

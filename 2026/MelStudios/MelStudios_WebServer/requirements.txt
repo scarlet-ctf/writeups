@@ -1,0 +1,5 @@
+fastapi[standard]
+pycryptodome
+sqlalchemy
+gunicorn
+faker

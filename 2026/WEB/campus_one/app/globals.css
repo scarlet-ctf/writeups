@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm neutral palette (Stone) */
+  --foreground-rgb: 28, 25, 23; /* Stone-900 */
+  --background-start-rgb: 250, 250, 249; /* Stone-50 */
+  --background-end-rgb: 245, 245, 244; /* Stone-100 */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
