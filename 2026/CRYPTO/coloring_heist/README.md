@@ -1,4 +1,4 @@
-# [Coloring Heist] by [Rajat Patel, Thomas Yang]
+# Coloring Heist by ContronThePanda, Thomas Yang
 
 ### REQUIRES DEPLOYABLE CONTENT
 
