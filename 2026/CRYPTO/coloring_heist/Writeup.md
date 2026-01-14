@@ -35,7 +35,3 @@ However, the idea is that because the commits were generated via a PRNG, we effe
 However, it's not as simple as just querying node 1, because the salt sequence is shuffled. We know the salts are dependent in _some_ order, but not what. So we can recover, for that specific instance, the suffix of salts.
 
 _Furthermore_, for this version of the problem, you can't actually simulate the PRNG directly forward, because the internal observable state is truncated every time you generate a seed.
-
-# TODO: Have contron explain this solution
-
-(some lattice attack idk)
