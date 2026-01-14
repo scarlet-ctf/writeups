@@ -15,3 +15,6 @@ Flag: `RUSEC{g0d_im_s0_s0rry_for_th1s_p4in}`
 Every CTF needs a classic flag-checker REV challenge with an esolang.
 
 Have fun :)
+
+## NOTE
+Compiled with https://github.com/elikaski/BF-it
